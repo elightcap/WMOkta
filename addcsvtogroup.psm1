@@ -14,7 +14,7 @@ function add-csvtogroup {
     $headers = @{
         "accept"        = "application/json"
         "Content-Type"  = "application/json"
-        "Authorization" = $key
+        "Authorization" = "SSWS $key"
     }
     $csv = import-csv -Path $csvpath
     foreach ($user in $csv) {
