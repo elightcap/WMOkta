@@ -23,6 +23,6 @@ function add-csvtogroup {
         $uID = $uProfile.id
         $gprofile = invoke-restmethod "https://weedmaps.okta.com/api/v1/groups?q=$group" -method get -Headers $headers
         $gID = $gprofile.id
-        invoke-restmethod -Uri "https://weedmaps.okta.com/api/v1/groups/$gid/users/$uId" -method put
+        invoke-restmethod -Uri "https://weedmaps.okta.com/api/v1/groups/$gid/users/$uId" -method put -Headers $headers
     }
 }
